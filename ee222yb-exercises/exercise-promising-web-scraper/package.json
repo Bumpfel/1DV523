@@ -1,0 +1,21 @@
+{
+  "name": "exercise-promising-web-scraper-master",
+  "version": "1.0.0",
+  "description": "In this exercise, you are going to create a web scraper, i.e. a program that to some extent acts as a web browser.",
+  "main": "app.js",
+  "directories": {
+    "lib": "lib"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node app.js"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "fs": "0.0.1-security",
+    "fs-extra": "^8.1.0",
+    "jsdom": "^15.2.1",
+    "node-fetch": "^2.6.0"
+  }
+}

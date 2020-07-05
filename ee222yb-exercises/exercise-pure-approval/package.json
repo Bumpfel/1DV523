@@ -1,0 +1,32 @@
+{
+  "name": "exercise-pure-approval",
+  "version": "1.0.0",
+  "description": "In this exercise, you should write a web application with Express and persistent data stored by MongoDB through Mongoose. This exercise is also about how to validate user input through Mongoose schema and presenting information to the user through 'flash messages'.",
+  "main": "app.js",
+  "scripts": {
+    "start": "node app.js",
+    "devstart": "nodemon app.js --inspector"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/1dv525/ee222yb-exercise.git"
+  },
+  "author": "Eric Enoksson <ee222yb@student.lnu.se>",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/1dv525/ee222yb-exercise/issues"
+  },
+  "homepage": "https://github.com/1dv525/ee222yb-exercise/exercise-pure-approval#readme",
+  "dependencies": {
+    "express": "^4.17.1",
+    "express-hbs": "^2.2.0",
+    "express-session": "^1.17.0",
+    "mongoose": "^5.7.12"
+  },
+  "devDependencies": {
+    "nodemon": "^1.19.4"
+  },
+  "nodemonConfig": {
+    "ext": "js, json, hbs, css, html"
+  }
+}

@@ -1,0 +1,14 @@
+body {
+  background-color: blanchedalmond;
+}
+
+form input {
+  margin: 2px 0;
+}
+
+form textarea {
+  margin: 2px 0;
+  resize: none;
+  width: 250px;
+  height: 150px;
+}

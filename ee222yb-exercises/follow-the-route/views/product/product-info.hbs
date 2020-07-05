@@ -1,0 +1,31 @@
+<a href='/'>Home</a> / <a href='/product'>Products</a> / {{locals.product.name}}
+
+<br><br>
+
+<table class="products">
+  <tr>
+    <th>Name</th>
+    <td>{{locals.product.name}}</td>
+  </tr><tr>
+    <th>Price</th>
+    <td>{{locals.product.price}} SEK</td>
+  </tr><tr>
+    <th>Description</th>
+    <td>{{locals.product.description}}</td>
+  </tr>
+
+  <br><br>
+
+  <button onclick="document.querySelector('.popup').classList.remove('hidden')">Delete</button>
+  {{!-- <button onclick="location='{{locals.product.id}}/delete'">Delete</button> --}}
+
+
+  <div class="popup hidden">
+    This action cannot be undone.
+    <br>
+    Are you certain you want to delete this product?
+    <br>
+    <button onclick="location='{{locals.product.id}}/delete'">Yes</button>
+    <button onclick="document.querySelector('.popup').classList.add('hidden')">Cancel</button>
+  </div>
+</table>

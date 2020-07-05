@@ -1,0 +1,13 @@
+<h1>Create pure number</h1>
+
+{{#if locals.flash}}
+  <div class="flashMessage {{locals.flash.type}}">
+      {{locals.flash.msg}}
+  </div>
+{{/if}}
+
+<form method="post" action="/createNumber">
+  <input name="numberValue" type="number" autofocus autocomplete="off" placeholder="Value">
+  <br>
+  <input type="submit" value="Save">
+</form>

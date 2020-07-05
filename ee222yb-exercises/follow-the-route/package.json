@@ -1,0 +1,24 @@
+{
+  "name": "follow-the-route",
+  "version": "1.0.0",
+  "description": "In this exercise, you should train your ability to create routes in the Node.js web application framework [Express](https://expressjs.com/) and render some simple views.",
+  "main": "index.js",
+  "scripts": {
+    "start": "node app.js",
+    "devstart": "nodemon app.js --inspector"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "express": "^4.17.1",
+    "express-hbs": "^2.2.0",
+    "mongoose": "^5.7.12"
+  },
+  "devDependencies": {
+    "nodemon": "^1.19.4"
+  },
+  "nodemonConfig": {
+    "ext": "js, hbs"
+  }
+}

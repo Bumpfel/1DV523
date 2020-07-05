@@ -1,0 +1,25 @@
+<h1>Pure numbers</h1>
+
+{{#if locals.flash}}
+  <div class="flashMessage {{locals.flash.type}}">
+      {{locals.flash.msg}}
+  </div>
+{{/if}}
+
+<table>
+  <tr>
+    <th>Created</th>
+    <th>Value</th>
+  </tr>
+  {{#each locals.numbers as | number |}}
+  <tr>
+    <td class="bold">{{ number.createdAt }}</td>
+    <td>{{ number.value }}</td>
+  </tr>
+  {{/each}}
+</table>
+
+<br>
+<div class="text">
+  List of pure numbers
+</div>

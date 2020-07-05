@@ -1,0 +1,13 @@
+<link rel="stylesheet" href="/css/snippets.css">
+<title>Bum CRUD - Edit snippet</title>
+
+<h1>Edit snippet</h1>
+
+<form method="post" class="snippetForm" action="/snippet/edit/{{snippet._id}}">
+  <textarea name="content" autofocus>{{snippet.content}}</textarea>
+  <br>
+  <input type="text" name="tags" placeholder="tags (optional)" value="{{#each snippet.tags as | tag |}}{{tag}} {{/each}}">
+  <br>
+  <input type="submit" value="Edit">
+  <input type="button" onClick="location.href='/'" value="Cancel">
+</form>

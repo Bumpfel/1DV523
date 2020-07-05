@@ -1,0 +1,20 @@
+{
+  "name": "the-node-platform-exercise-rotten-tomatoes",
+  "version": "1.0.0",
+  "description": "In this exercise, you will get started with a simple node application. The application will read from two files; one JSON file and one XML file.",
+  "main": "app.js",
+  "scripts": {
+    "test": "standard | snazzy || true",
+    "start": "node app.js"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "fs-extra": "^8.1.0",
+    "xml2js": "^0.4.22"
+  },
+  "devDependencies": {
+    "snazzy": "^8.0.0",
+    "standard": "^14.3.1"
+  }
+}

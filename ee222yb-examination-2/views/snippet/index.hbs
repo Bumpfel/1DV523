@@ -1,0 +1,68 @@
+<link rel="stylesheet" href="/css/snippets.css">
+<title>Bum CRUD - Home</title>
+
+<h1>
+  Snippets
+  {{#if searchString}}
+    <span class="searchHeader">
+      {{#if (equal searchType "user")}}
+        from user(s): "<em>{{searchString}}</em>"
+      {{else}}
+        matching tag(s): "<em>{{searchString}}</em>"
+      {{/if}}
+      <a href="/">clear</a>
+    </span>
+  {{/if}}
+</h1>
+
+<div class="results">
+  {{results currentPage snippetsPerPage nrOfSnippets}} 
+</div>
+<div class="pagination">
+  {{pagination currentPage snippetsPerPage nrOfSnippets searchString searchType}}
+</div>
+
+<section>
+  {{#each snippets as | snippet |}}
+    <div class="snippet {{#if snippet.belongsToUser}}owner{{/if}}" id="{{snippet._id}}">
+      <div class="content">{{snippet.content}}</div>
+      <div class="tags">
+        {{#each snippet.tags as | tag |}}
+          <a href="/?page={{@root.currentPage}}&q={{#if (equal @root.searchType 'tags')}}{{@root.searchString}}+{{/if}}{{tag}}&t=tags" class="tag">{{tag}}</a>
+        {{/each}}
+      </div>
+      <div class="bottombar">
+        <div class="functions">
+          {{#if snippet.belongsToUser}}
+            <a href="/snippet/edit/{{snippet._id}}">edit</i></a>
+            <a href="/snippet/delete/{{snippet._id}}">delete</i></a>
+          {{/if}}
+        </div>
+        
+        <div class="right">
+           
+           {{#if snippet.isEdited}}
+            <div class="userInfo">
+              edited on 
+              <br>
+              {{formatDate snippet.updatedAt}}
+            </div>
+          {{/if}}
+          
+          <div class="userInfo">
+            posted by <strong><a href="/?page={{@root.currentPage}}&q={{snippet.author}}&t=user">{{snippet.author}}</a></strong>
+            <br>
+            {{formatDate snippet.createdAt}}
+          </div>
+
+        </div>
+      </div>
+    </div>
+  {{/each}}
+</section>
+
+<div class="pagination">
+  {{pagination currentPage snippetsPerPage nrOfSnippets searchString searchType}}
+</div>
+{{!-- <script type="module" src="/js/snippets.js"></script>
+<script nomodule src="/js/snippets.js"></script> --}}

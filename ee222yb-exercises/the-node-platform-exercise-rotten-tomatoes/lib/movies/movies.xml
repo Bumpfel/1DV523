@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<movies>
+  <movie>
+    <title>The Shawshank Redemption</title>
+    <rating>91</rating>
+    <reviews>66</reviews>
+    <released>1994</released>
+  </movie>
+  <movie>
+    <title>The Godfather</title>
+    <rating>99</rating>
+    <reviews>84</reviews>
+    <released>1972</released>
+  </movie>
+  <movie>
+    <title>The Godfather: Part II</title>
+    <rating>97</rating>
+    <reviews>72</reviews>
+    <released>1974</released>
+  </movie>
+  <movie>
+    <title>The Dark Knight</title>
+    <rating>94</rating>
+    <reviews>314</reviews>
+    <released>2008</released>
+  </movie>
+
+  <movie>
+    <title>Pulp Fiction</title>
+    <rating>93</rating>
+    <reviews>76</reviews>
+    <released>1994</released>
+  </movie>
+
+</movies>

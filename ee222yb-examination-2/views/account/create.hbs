@@ -1,0 +1,13 @@
+<title>Bum CRUD - Create new account</title>
+
+<h1>Create new account</h1>
+
+<form method="post" class="createForm" action="/account/create">
+  <input name="username" type="text" autofocus autocomplete="off" placeholder="User name ({{constraints.username.min}} - {{constraints.username.max}} chars)" value="{{username}}">
+  <br>
+  <input name="password" type="password" placeholder="Password ({{constraints.password.min}} + chars)"> 
+  <br>
+  <input name="confirmPassword" type="password" placeholder="Confirm password">
+  <br>
+  <input type="submit" value="Create account">
+</form>

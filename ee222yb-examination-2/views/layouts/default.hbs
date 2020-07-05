@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+
+<html lang="en">
+  <head>
+    <meta charset="utf-16">
+    <link rel="stylesheet" href="/css/styles.css">
+    <script type="module" src="/js/navbarStyling.js"></script>
+  </head>
+  <body>
+    <nav>
+      <a href="/">Snippets</a>
+      {{#if isLoggedIn}}
+        <a href="/snippet/create">New snippet</a>
+      {{/if}}
+
+      <form method="get" id="searchForm" action="/">
+        <input type="search" placeholder="Search..." name="q" autocomplete="off" value="{{searchString}}">
+        <select name="t">
+          <option {{#if (equal searchType 'user')}} selected {{/if}}>user</option>
+          <option {{#if (equal searchType 'tags')}} selected {{/if}}>tags</option>
+        </select>
+      </form>
+
+      <div class="right">
+        {{#if isLoggedIn}}
+          <span>
+            logged in as
+            <br>
+            <strong>{{username}}</strong>&nbsp;
+          </span>
+          <a href="/logout">Log out</a>
+        {{else}}
+          <a href="/account/login">Log in</a>
+          <a href="/account/create">Create an account</a>
+        {{/if}}
+      </div>
+
+    </nav>
+
+    <main>
+      {{{body}}}
+
+      <br>
+      <br>
+      {{#if flash}}
+        <div class="flashMessage {{flash.type}}">
+          {{flash.msg}}
+        </div>
+      {{/if}}
+    </main>
+  </body>
+</html>

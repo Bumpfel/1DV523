@@ -1,0 +1,15 @@
+<link rel="stylesheet" href="/css/snippets.css">
+<title>Bum CRUD - Create new snippet</title>
+
+<h1>Create new snippet</h1>
+
+<form method="post" class="snippetForm" action="/snippet/create">
+  <fieldset {{#unless isLoggedIn}} disabled {{/unless}}>
+    <textarea name="content" placeholder="{{#if isLoggedIn}}Content{{else}}You have to log in to be able to post snippets{{/if}}"></textarea>
+    <br>
+    <input type="text" name="tags" placeholder="tags (optional)">
+    <br>
+    <input type="submit" value="Send">
+    <input type="button" onClick="location.href='/'" value="Cancel">
+  </fieldset>
+</form>

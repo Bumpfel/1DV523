@@ -1,0 +1,128 @@
+body {
+  margin: 0;
+  background-color: #ebf3f1;
+  /* background-color: white; */
+  font-family: 'Calibri', 'Arial', 'Helvetica', 'sans-serif';
+}
+
+nav {
+  display: flex;
+  white-space: nowrap;
+  background-color: #555;
+  color: white;
+  padding: 0 20px;
+  font-size: 120%;
+}
+
+nav .right {
+  display: flex;
+  flex-wrap: nowrap;
+  margin-left: auto;
+}
+
+nav a {
+  padding: 15px 10px;
+  text-decoration: none;
+  color: #ccc;
+}
+
+nav span {
+  padding: 7px 10px;
+  font-size: 70%;
+  text-align: right;
+}
+
+
+nav a:hover, nav a:focus {
+  background-color: #707070;
+  color: #eee;
+  /* outline: none; */
+}
+
+nav a.activeLink {
+  color: #eee;
+  background-color: #aaa !important;
+}
+
+#searchForm {
+  margin: auto 20px;
+  width: 100%;
+}
+
+#searchForm :nth-child(n) {
+  padding: 3px;
+}
+
+#searchForm input {
+  min-width: 120px;
+  max-width: 800px;
+  width: 30%;
+}
+
+
+
+main {
+  padding: 10px 20px;
+  width: auto;
+  /* border: 1px solid red; */
+}
+
+main a {
+  text-decoration: none;
+  color: grey;
+}
+
+.accountForm input {
+  margin: 2px 0;
+  padding: 2px;
+}
+
+.errorMsg {
+  color: #900;
+  background-color: #eaa;
+}
+
+.successMsg {
+  color: #090;
+  background-color: #beb;
+}
+
+/* .flashMessage { OLD msg, placed at top
+  border: 1px solid;
+  width: auto;
+  
+  border-radius: 5px;
+  text-align: center;
+  padding: 10px 15px;
+  word-wrap: break-word;
+} */
+
+.flashMessage {
+  position: fixed;
+  bottom: 0;
+  padding: 5px 50px;
+  width: calc(100% - 142px);
+
+  border: 1px solid;
+  border-bottom: 0;
+  border-radius: 5px;
+  border-bottom-left-radius: 0;
+  border-bottom-right-radius: 0;
+  text-align: center;
+  word-wrap: break-word;
+
+  animation: fade-in-out 7s forwards;
+}
+
+@keyframes fade-in-out {
+  0% { opacity: 0; }
+  10% { opacity: 1; }
+  80% { opacity: 1; }
+  100% { opacity: 0; }
+}
+
+@media(max-width: 600px) {
+  #searchForm {
+    display: none;
+  }
+}

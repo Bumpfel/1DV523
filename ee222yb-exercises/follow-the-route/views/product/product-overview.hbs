@@ -1,0 +1,14 @@
+<a href="/">Home</a> / Products
+
+<br>
+
+<h1>Products page</h1>
+<ul>
+  {{#each locals.products as | product |}}
+  <li>
+    <a href="/product/{{product.id}}">{{product.name}}</a>
+  </li>
+  {{/each}}
+</ul>
+
+<a href="/product/create">Create new product</a>

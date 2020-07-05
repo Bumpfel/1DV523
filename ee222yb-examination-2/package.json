@@ -1,0 +1,36 @@
+{
+  "name": "ee222yb-examination-2",
+  "version": "1.0.0",
+  "description": "",
+  "main": "app.js",
+  "scripts": {
+    "start": "node app.js",
+    "devstart": "nodemon app.js --inspector"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/1dv523/ee222yb-examination-2.git"
+  },
+  "author": "Eric Enoksson <ee222yb@student.lnu.se>",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/1dv523/ee222yb-examination-2/issues"
+  },
+  "homepage": "https://github.com/1dv523/ee222yb-examination-2#readme",
+  "dependencies": {
+    "bcrypt": "^3.0.7",
+    "express": "^4.17.1",
+    "express-hbs": "^2.2.0",
+    "express-session": "^1.17.0",
+    "helmet": "^3.21.2",
+    "moment": "^2.24.0",
+    "mongoose": "^5.7.12",
+    "morgan": "^1.9.1"
+  },
+  "devDependencies": {
+    "nodemon": "^1.19.4"
+  },
+  "nodemonConfig": {
+    "ext": "js, json, hbs, css, html"
+  }
+}

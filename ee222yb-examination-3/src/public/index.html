@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <link rel="stylesheet" href="css/style.css">
+    <script type="module" src="js/websocket.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <title>Issues</title>
+  </head>
+  <body>
+    <div class="menu">
+      <h1></h1>
+      
+      <div class="toggleButttons">
+        <a href="#" id="toggleAll">All</a>
+        <a href="#" id="toggleOpen">Open</a>
+        <a href="#" id="toggleClosed">Closed</a>
+      </div>
+    
+    </div>
+
+    <div id="issueContainer"></div>
+    <script src="/socket.io/socket.io.js"></script>
+  </body>
+</html>

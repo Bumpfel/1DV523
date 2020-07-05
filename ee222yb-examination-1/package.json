@@ -1,0 +1,30 @@
+{
+  "name": "ee222yb-examination-1",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node app.js",
+    "lint": "standard | snazzy || exit 0"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/1dv523/ee222yb-examination-1.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/1dv523/ee222yb-examination-1/issues"
+  },
+  "homepage": "https://github.com/1dv523/ee222yb-examination-1#readme",
+  "dependencies": {
+    "jsdom": "^15.2.1",
+    "node-fetch": "^2.6.0",
+    "request": "^2.88.0"
+  },
+  "devDependencies": {
+    "snazzy": "^8.0.0",
+    "standard": "^14.3.1"
+  }
+}
